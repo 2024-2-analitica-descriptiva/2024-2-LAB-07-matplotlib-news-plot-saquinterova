@@ -49,7 +49,8 @@ def pregunta_01():
         plt.plot(df[col], color=colors[col], label=col,
                  zorder=zorder[col], linewidth=linewidth[col])
 
-    plt.title("How people get their news", fontsize=16)
+    plt.suptitle("How people get their news", fontsize=16)
+    plt.title('An increasing proportion cite the internet as their primary news source', fontsize=8)
 
     plt.gca().spines['top'].set_visible(False)
     plt.gca().spines['right'].set_visible(False)
@@ -71,7 +72,7 @@ def pregunta_01():
         plt.text(last_year + 0.2, df[col].loc[last_year], str(
             df[col].loc[last_year]) + "%", ha='left', va='center', color=colors[col])
 
-    plt.legend(loc='upper right')
+
     plt.show()
 
     plt.xticks(ticks=df.index, labels=df.index, ha='center')
